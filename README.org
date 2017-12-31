@@ -1,0 +1,46 @@
+#+TITLE: Flow editor support using lsp-mode
+
+* Description
+
+  This package provides editor support for flow via ~lsp-mode~ and
+  ~flow-language-server~.
+
+* Installation
+
+  Install ~flow-language-server~ globally beforehand:
+
+#+BEGIN_SRC sh
+npm i -g flow-language-server
+#+END_SRC
+
+** Manual
+
+   Make sure you installed ~lsp-mode~.
+
+   Clone this repository, and add in your config:
+
+#+BEGIN_SRC emacs-lisp
+(add-to-list 'load-path "/path/to/the/repo")
+(require 'lsp-javascript-flow)
+#+END_SRC
+
+** Quelpa
+
+   To come...
+
+* Configuration
+
+  Enable the integration in your major modes of choice:
+
+#+BEGIN_SRC emacs-lisp
+(add-hook 'js-mode-hook #'lsp-javascript-flow-enable)
+(add-hook 'js2-mode-hook #'lsp-javascript-flow-enable)
+#+END_SRC
+
+  You will also need to register your major mode of choice in lsp-flycheck modes
+  to get diagnostics notification:
+
+#+BEGIN_SRC emacs-lisp
+(lsp-flycheck-add-mode 'js-mode)
+(lsp-flycheck-add-mode 'js2-mode)
+#+END_SRC
