@@ -1,6 +1,6 @@
 ;;; lsp-javascript-flow.el --- Language server protocol integration for flow
 ;;; Version: 0.1.0
-;;; URL: None
+;;; URL: https://github.com/stevenremot/emacs-lsp-javascript-flow
 ;;; Package-Requires: ((lsp-mode "3.4"))
 
 ;;; Commentary:
@@ -16,7 +16,6 @@
   (lsp-make-traverser #'(lambda (dir)
                           (directory-files dir nil ".flowconfig"))))
 
-;;;###autoload
 (lsp-define-stdio-client lsp-javascript-flow "javascript-flow"
                          lsp-javascript-flow--get-root
                          '("flow-language-server" "--stdio"))

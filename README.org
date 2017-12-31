@@ -26,7 +26,9 @@ npm i -g flow-language-server
 
 ** Quelpa
 
-   To come...
+#+BEGIN_SRC emacs-lisp
+(quelpa '(lsp-javascript-flow :fetcher github :repo "stevenremot/emacs-lsp-javascript-flow"))
+#+END_SRC
 
 * Configuration
 
