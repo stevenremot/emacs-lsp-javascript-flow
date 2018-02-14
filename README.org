@@ -1,5 +1,7 @@
 #+TITLE: Flow editor support using lsp-mode
 
+*Prefer using the official package [[https://github.com/emacs-lsp/lsp-javascript][lsp-javascript]]*
+
 * Description
 
   This package provides editor support for flow via ~lsp-mode~ and
